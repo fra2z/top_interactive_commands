@@ -1,6 +1,6 @@
-4. INTERACTIVE Commands
-       Listed  below  is  a brief index of commands within categories.  Some commands appear more than once
-        --  their meaning or scope may vary depending on the context in which they are issued.
+## 4. INTERACTIVE Commands
+
+Listed  below  is  a brief index of commands within categories.  Some commands appear more than once -- their meaning or scope may vary depending on the context in which they are issued.
 
          4a. Global-Commands
                <Ent/Sp> ?, =, 0,
@@ -21,12 +21,11 @@
          5d. Searching-in-a-Window
                L, &
 
-   4a. GLOBAL Commands
-       The global interactive commands are always available in both full-screen mode and  alternate-display
-       mode.  However, some of these interactive commands are not available when running in Secure mode.
+### 4a. GLOBAL Commands
 
-       If  you  wish  to  know in advance whether or not your top has been secured, simply ask for help and
-       view the system summary on the second line.
+The global interactive commands are always available in both full-screen mode and  alternate-display mode.  However, some of these interactive commands are not available when running in Secure mode.
+
+If  you  wish  to  know in advance whether or not your top has been secured, simply ask for help and view the system summary on the second line.
 
          <Enter> or <Space>  :Refresh-Display
               These commands awaken top and following receipt of any input the entire display will  be  re‐
@@ -202,13 +201,11 @@
        *  The  commands  shown  with  an  asterisk (`*') are not available in Secure mode, nor will they be
           shown on the level-1 help screen.
 
-   4b. SUMMARY AREA Commands
-       The summary area interactive commands are always available  in  both  full-screen  mode  and  alter‐
-       nate-display  mode.  They affect the beginning lines of your display and will determine the position
-       of messages and prompts.
+### 4b. SUMMARY AREA Commands
 
-       These commands always impact just the `current' window/field group.  See topic 5.  ALTERNATE-DISPLAY
-       Provisions and the `g' interactive command for insight into `current' windows and field groups.
+The summary area interactive commands are always available  in  both  full-screen  mode  and  alter‐nate-display  mode. They affect the beginning lines of your display and will determine the position of messages and prompts.
+
+These commands always impact just the 'current' window/field group.  See topic 5.  ALTERNATE-DISPLAY Provisions and the 'g' interactive command for insight into 'current' windows and field groups.
 
           C  :Show-scroll-coordinates toggle
               Toggle an informational message which is displayed whenever the message line is not otherwise
@@ -269,11 +266,9 @@
        ficed the program name in full-screen mode or the `current' window name  when  in  alternate-display
        mode.
 
-   4c. TASK AREA Commands
-       The task area interactive commands are always available in full-screen mode.
-
-       The  task  area  interactive commands are never available in alternate-display mode if the `current'
-       window's task display has been toggled Off (see topic 5. ALTERNATE-DISPLAY Provisions).
+### 4c. TASK AREA Commands
+       
+The task area interactive commands are always available in full-screen mode. The  task  area  interactive commands are never available in alternate-display mode if the 'current' window's task display has been toggled Off (see topic 5. ALTERNATE-DISPLAY Provisions).
 
        APPEARANCE of task window
 
@@ -446,10 +441,9 @@
           Note:  Field  sorting uses internal values, not those in column display.  Thus, the TTY and WCHAN
           fields will violate strict ASCII collating sequence.
 
-   4d. COLOR Mapping
-       When you issue the `Z' interactive command, you will be presented  with  a  separate  screen.   That
-       screen  can  be used to change the colors in just the `current' window or in all four windows before
-       returning to the top display.
+### 4d. COLOR Mapping
+
+When you issue the 'Z' interactive command, you will be presented with a separate screen. That screen  can  be used to change the colors in just the 'current' window or in all four windows before returning to the top display.
 
        The following interactive commands are available.
            4 upper case letters to select a target
@@ -471,9 +465,12 @@
        full-screen  mode  or alternate-display mode.  Whatever was targeted when `q' or <Enter> was pressed
        will be made current as you return to the top display.
 
-5. ALTERNATE-DISPLAY Provisions
-   5a. WINDOWS Overview
-       Field Groups/Windows:
+## 5. ALTERNATE-DISPLAY Provisions
+   
+### 5a. WINDOWS Overview
+  
+Field Groups/Windows:
+          
           In full-screen mode there is a single window represented by the entire screen.  That single  win‐
           dow  can  still be changed to display 1 of 4 different field groups (see the `g' interactive com‐
           mand, repeated below).  Each of the 4 field groups has a unique separately  configurable  summary
@@ -486,7 +483,8 @@
           one summary area can be displayed.  However, depending on your commands, there could be from zero
           to four separate task displays currently showing on the screen.
 
-       Current Window:
+Current Window:
+          
           The `current' window is the window associated with the summary area and the window to which  task
           related  commands  are  always directed.  Since in alternate-display mode you can toggle the task
           display Off, some commands might be restricted for the `current' window.
@@ -495,8 +493,9 @@
           loss  of  the window name (the `l' toggled line), you'll not easily know what window is the `cur‐
           rent' window.
 
-   5b. COMMANDS for Windows
-          - | _  :Show/Hide-Window(s) toggles
+### 5b. COMMANDS for Windows
+
+       - | _  :Show/Hide-Window(s) toggles
               The `-' key turns the `current' window's task display On and Off.  When On,  that  task  area
               will  show  a  minimum of the columns header you've established with the `f' interactive com‐
               mand.  It will also reflect any other task area options/toggles you've applied yielding  zero
@@ -550,10 +549,9 @@
               a, w       act the same with color mapping
                          and fields management
 
-   5c. SCROLLING a Window
-       Typically a task window is a partial view into a systems's total tasks/threads which shows only some
-       of the available fields/columns.  With these scrolling keys, you can move that  view  vertically  or
-       horizontally to reveal any desired task or column.
+### 5c. SCROLLING a Window
+       
+Typically a task window is a partial view into a systems's total tasks/threads which shows only some of the available fields/columns.  With these scrolling keys, you can move that  view  vertically  or horizontally to reveal any desired task or column.
 
        Up,PgUp  :Scroll-Tasks
            Move  the view up toward the first task row, until the first task is displayed at the top of the
@@ -615,8 +613,9 @@
        since  not  all  tasks  will be visible.  This is particularly apparent when using the Up/Down arrow
        keys.
 
-   5d. SEARCHING in a Window
-       You can use these interactive commands to locate a task row containing a particular value.
+### 5d. SEARCHING in a Window
+       
+You can use these interactive commands to locate a task row containing a particular value.
 
        L  :Locate-a-string
            You will be prompted for the case-sensitive string to locate starting from  the  current  window
@@ -663,15 +662,11 @@
        window's search string is empty.  See the `x' interactive command for additional information on sort
        column highlighting.
 
-   5e. FILTERING in a Window
-       You  can  use  this `Other Filter' feature to establish selection criteria which will then determine
-       which tasks are shown in the `current' window.  Such filters can be made presistent if preserved  in
-       the rcfile via the 'W' interactive command.
+### 5e. FILTERING in a Window
 
-       Establishing a filter requires: 1) a field name; 2) an operator; and 3) a selection value, as a min‐
-       imum.  This is the most complex of top's user input requirements so, when you make a  mistake,  com‐
-       mand recall will be your friend.  Remember the Up/Down arrow keys or their aliases when prompted for
-       input.
+You can use this 'Other Filter' feature to establish selection criteria which will then determine which tasks are shown in the 'current' window.  Such filters can be made presistent if preserved  in the rcfile via the 'W' interactive command.
+
+Establishing a filter requires: 1) a field name; 2) an operator; and 3) a selection value, as a minimum.  This is the most complex of top's user input requirements so, when you make a  mistake,  command recall will be your friend.  Remember the Up/Down arrow keys or their aliases when prompted for input.
 
        Filter Basics
 
